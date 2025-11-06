@@ -1,0 +1,9 @@
+.review {
+    background-color: #829B97;
+    text-align: center;
+    padding: 20px 10px;
+    width: 336px;
+    height: 308px;
+    margin: 10px auto;
+    border-radius: 40px 0 40px 0;
+}
