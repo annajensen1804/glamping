@@ -1,10 +1,13 @@
 .btnFrontPage {
     margin: 20px;
     padding: 15px 60px;
-    background-color: #ffffff16;
-    border: 1px solid #fff;
+    background-color: #829B97;
+    border: none;
     border-radius: 40px 0 40px 0;
     text-align: center;
     color: #fff;
     font-size: 30px;
+    font-family: "Zen Loop", cursive;
+    font-weight: 500;
+    text-transform: uppercase;
 }

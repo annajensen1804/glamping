@@ -1,9 +1,12 @@
 import styles from './btnFrontPage.module.css'
 
-const BtnFrontPage = () => {
+const BtnFrontPage = ({buttonText, onClick, background, border}) => {
     return (
-        <button className={styles.btnFrontPage}>
-            <h3>BOOK NU</h3>
+        <button 
+        className={styles.btnFrontPage} 
+        style= {{backgroundColor: background, border: border}} 
+        onClick={onClick}>
+            <p>{buttonText}</p>
         </button>
     )
 }

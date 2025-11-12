@@ -1,0 +1,24 @@
+.container {
+    padding-top: 60px;
+    background-color: #CED3CD;
+    justify-content: center;
+}
+
+.component {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.staysName {
+    background-color: #C5B496;
+    padding: 10px 30px;
+    border-radius: 40px 0 40px 0;
+    width: 90vw;
+}
+
+.component > img {
+    width: 100vw;
+    height: auto;
+    object-fit: cover;
+}

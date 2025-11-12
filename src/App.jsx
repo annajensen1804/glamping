@@ -1,48 +1,21 @@
 import './App.css'
-import PageHeader from './components/pageHeader/PageHeader'
-import Footer from './components/footer/Footer';
-import SectionText from './components/sectionText/SectionText';
-import Review from './components/review/Review';
+import { useRoutes } from 'react-router';
+import Home from './pages/Home';
+import Stays from './pages/Stays'
+import BurgerMenu from './components/burgerMenu/BurgerMenu';
 
 // Parent komponent
 function App() {
+
+const routes = useRoutes([
+  { path: "/", element: <Home /> },
+  { path: "/stays", element: <Stays /> },
+]);
+
   return (
     <>
-      <PageHeader />
-      <SectionText />
-
-      <div className="container">
-        <Review
-          title={"Har været på romantisk Getaway"}
-          name={"Lise, 34 år"}
-          description={
-            "Min kæreste og jeg fejrede vores årsdag med et ophold ved Gittes Glamping. Det vil vi helt sikkert gøre igen. personalet var virkelig søde og servicemindede, og maden og stemningen var i top."
-          }
-        />
-        <Review
-          title={"Har været på weekendtur"}
-          name={"Johanne, 22 år"}
-          description={
-            "Jeg blev inviteret med af min veninde. Det var første gang jeg prøvede glamping. Jeg var lidt skeptisk, da jeg ikke bryder mig om at sove udenfor. Men jeg blev positivt overraket. Sengene var gode, og det var slet ikke ubehageligt at vågne op i teltet, som det ellers plejer at være i et normalt telt."
-          }
-        />
-        <Review
-          title={"Benjamin, 42 år"}
-          name={"Har været på Familiepakken"}
-          description={
-            "Top karakter til Gittes Glamping herfra! Perfekt blanding af primitivt og luksuriøst. Og ungerne elskede det!"
-          }
-        />
-        <Review
-          title={"Har været på Weekendtur"}
-          name={"Peter, 61 år"}
-          description={
-            "Jeg havde en rigtig hyggelig weekend, og maden er i særdeleshed en oplevelse værd. Min hustru synes kanoturen var rigtig idyllisk. Jeg er dog ikke så vild med at sejle."
-          }
-        />
-      </div>
-
-      <Footer />
+      <BurgerMenu />
+      {routes}
     </>
   );
 }
