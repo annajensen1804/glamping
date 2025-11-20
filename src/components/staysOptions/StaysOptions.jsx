@@ -1,22 +1,37 @@
-import styles from './staysOptions.module.css'
-import BtnFrontPage from '../btnFrontPage/BtnFrontPage';
+import { useState, useEffect } from 'react';
+import styles from '../stay/stay.module.css'
+import Stay from '../stay/Stay';
 
-const StaysOptions = ({ title, subtitle1, subtitle2, image, buttonText }) => {
-  return (
-    <article className={styles.container}>
-      <div className={styles.component}>
-        <div className={styles.staysName}>
-          <h3>{title}</h3>
-          <h4>{subtitle1}</h4>
-          <h4>{subtitle2}</h4>
-        </div>
+const StaysOptions = () => {
+  const [stays, setStays] = useState([]);
 
-        <img src={image} alt={title} />
+  const fetchStays = async () => {
+    try {
+      const response = await fetch(
+        "https://glamping-rqu9j.ondigitalocean.app/stays"
+      );
 
-        <BtnFrontPage>{buttonText}</BtnFrontPage>
-      </div>
-    </article>
-  );
-};
+      const data = await response.json();
+      console.log(data);
+
+      setStays(data.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    fetchStays();
+  }, []);
+
+
+    return (
+      <section className={styles.container}>
+        {stays.map((stay) => (
+          <Stay stay={stay} key={stay._id} />
+        ))}
+      </section>
+    );
+  };
 
 export default StaysOptions;

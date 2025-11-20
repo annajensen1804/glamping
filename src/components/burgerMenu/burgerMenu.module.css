@@ -1,3 +1,47 @@
-.burgerMenu {
+.burgerWrapper {
+background-color: #829B97;
+padding: 25px 30px;
+border-radius: 20px 0 20px 0;
+position: fixed;
+top: 20px;
+right: 20px;
+z-index: 10;
+}
 
+.burgerIcon {
+    cursor: pointer;
+    position: fixed;
+    top: 29px;
+    right: 34px;
+}
+
+.burgerMenu {
+    width: 80vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+}
+
+.burgerMenu ul {
+    list-style: none;
+}
+
+.burgerMenu li {
+    padding: 10px;
+    margin-bottom: 20px;
+    font-family: "Zen Loop", cursive;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.burgerMenu li:hover {
+    background-color: #6d827e;
+    border-radius: 20px 0 20px 0;
+}
+
+.burgerMenu a {
+    color: white;
+    text-decoration: none;
 }

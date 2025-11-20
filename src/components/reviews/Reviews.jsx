@@ -29,8 +29,8 @@ useEffect(() => {
 
     return (
       <div className={styles.container}>
-        {reviews.map((review, index) => (
-          <Review review={review} key={index} />
+        {reviews.map((review) => (
+          <Review review={review} key={review._id} />
         ))}
       </div>
     );

@@ -12,6 +12,7 @@
     flex-direction: column;
     align-items: center;
     position: relative;
+    margin-bottom: 200px;
 }
 
 .staysName {
@@ -33,10 +34,35 @@
     filter: brightness(70%);
 }
 
-.btnWrapper {
+.activityDetails {
+    background-color: #33626C;
+    width: 80vw;
+    border-radius: 40px 0 40px 0;
     position: absolute;
-    bottom: -60px;
+    bottom: -200px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 5;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.activityDetails > p {
+    font-family: "Zen Loop", cursive;
+    font-size: 26px;
+}
+
+.dateTime {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.dateTimeLike {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
 }

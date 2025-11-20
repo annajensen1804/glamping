@@ -1,7 +1,14 @@
 .footer {
     background-color: #2A4F57;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 
-    p {
-        color: rgb(255, 255, 255);
-    }
+.logoText {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
 }

@@ -1,18 +1,25 @@
 .header {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 10px;
   justify-content: center;
   align-items: center;
-  background-image: url("../../assets/forside.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-color: rgba(34, 42, 64, 0.516);
   background-blend-mode: hue;
-  height: 60vh;
+  height: 70vh;
 }
 
-img {
+.logoHome {
   width: 72px;
+}
+
+.logoDefault {
+  width: 50px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
 }

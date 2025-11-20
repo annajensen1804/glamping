@@ -1,0 +1,33 @@
+.sectionText {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+    background-color: #33626C;
+    padding: 60px;
+    margin-top: -40px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-family: "Zen Loop", cursive;
+    font-size: 20px;
+}
+
+input, textarea {
+    border: 1px solid white;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 10px;
+    line-height: 20px;
+    color: white;
+}
+
+.error {
+    color: red;
+}
