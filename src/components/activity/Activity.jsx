@@ -3,6 +3,7 @@ import styles from "../activity/activity.module.css"
 import BtnFrontPage from "../btnFrontPage/BtnFrontPage";
 import { useLocalStorage } from "@uidotdev/usehooks";
 import { IoMdHeart } from "react-icons/io";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Activity = ( {activity} ) => {
 
@@ -65,7 +66,19 @@ const handleLike = () => {
               />
             }
 
-            {text && <p>{activity.description}</p>}
+            <AnimatePresence>
+              {text && (
+                <motion.div
+                key='desc'
+                initial={{ height: 0, opacity: 0 }}
+                animate={{ height: "auto", opacity: 1 }}
+                exit={{ height: 0, opacity: 0 }}
+                transition={{ duration: 0.3 }}
+                style={{ overflow: "hidden" }}>
+                <p>{activity.description}</p>
+                </motion.div>
+                )}
+            </AnimatePresence>
           </div>
         </div>
       </section>
